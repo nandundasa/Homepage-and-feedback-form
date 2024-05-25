@@ -1,0 +1,362 @@
+/* Smooth scrolling behavior for the entire page */
+html{
+    scroll-behavior: smooth;
+}
+
+/* Styling for the body element */
+body{
+    background-image: url(tree3.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: rgb(165, 172, 167);
+    overflow-x: hidden;
+}
+
+/* Styling for the 1st page section */
+.banner{
+    color: white;
+    font-size: 36px;
+    margin-top: 125px;
+    text-align: center;
+}
+
+
+/* Styling for the navigation bar */
+.navbar{
+    top: 0;
+    width: 100%;
+    margin: auto;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    z-index: 3;
+    left: 0;
+}
+
+/* Styling for the organization logo */
+.logo{
+    width: 100px;
+    cursor: pointer;
+    margin-left: 40px;
+}
+.navbar ul {
+    margin-right: 40px;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0px 20px;
+    position: relative;
+    right: 50px;
+    top: 10px;
+
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: #09e735df;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.navbar ul li .active{
+    background-color: #05e53ddf;
+    padding: 10px;
+}
+
+/* Styling for sections */
+#section1{
+    height: 500px;
+    display: inline-block;
+    width: 100%;
+    padding-top: 120px;
+    background-position: left;
+}
+#section2{
+    height: 350px;
+    margin-right: 100px;
+    display: inline-block;
+    width: 95%;
+    padding-top: 80px;
+}
+#section3{
+    position: relative;
+    justify-content: center;
+    height: 300px;
+    display: inline-block;
+    width: 100%;
+    padding-top: 150px;
+}
+#section4{
+    height: 300px;
+    width: 100%;
+    display: flex;
+    padding-top: 300px;
+    width: 2000px;               
+    top: 100px;
+}
+#section5 {                        
+    position: relative; 
+    top: 50px; 
+    left: 0; 
+    width: 100%; 
+    height: 500px; 
+    display: inline-block;
+    padding-bottom: 100px; 
+}
+
+/* Styling for the mission section */
+.mission{
+    background-color: rgb(255, 255, 255);
+    width: 50%;
+    margin-top: 100px;
+    border-color: #0b7620df;
+    text-align: center;
+    padding: 40px;
+    font-size: 24px;
+}
+.mission p{
+    font-size: 25px;
+}
+.mission h1{
+    color: green;
+}
+
+/* Styling for the gallery section */
+.gallery{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+/* Styling for individual cards in the gallery */
+.card{
+    width: 80px;
+    border-radius: 1rem;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28, -0.03, 0, .99);
+    box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
+}
+.card > .row{
+    color: black;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.card > .row > .icon{
+    background: rgb(0, 0, 0);
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+.card > .row > .description{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 120px;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+.description p{
+    color: black;
+    padding: 5px;
+}
+.description h4{
+    text-transform: uppercase;
+}
+input{
+    display: none;
+}
+/* Styling for checked input and label */
+input:checked + label{
+    width: 600px;
+}
+input:checked + label .description{
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* Background images for different cards */
+.card[for ="c1"]{
+    background-image: url(Ehela.png);
+}
+.card[for ="c2"]{
+    background-image: url(Naa.jpeg);
+}
+.card[for ="c3"]{
+    background-image: url(Nuga.JPG);
+}
+.card[for ="c4"]{
+    background-image: url(Ebony.jpeg);
+}
+.card[for ="c5"]{
+    background-image: url(Kakuna.jpg);
+}
+.card[for ="c6"]{
+    background-image: url(Satina.jpeg);
+}
+.card[for ="c7"]{
+    background-image: url(Hora.jpg);
+}
+
+
+/* Styling for container of gallery cards */
+.container{
+    height: 400px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+/* Styling for donation section */
+.donate1{
+    display: inline;
+    margin-top: 150px;
+    font-size: 22px;
+    background-color: rgb(255, 255, 255);
+    padding: 150px;
+    width: 70%;
+}
+.donate1 h4{
+    color: red;
+}
+
+.donate1 h1 {
+    margin-bottom: 70px;
+    font-size: 40px;
+    text-align: center;
+    color: #00a60b;
+    margin-left: 40px;
+}
+
+
+.donate1 h2{
+    font-size: 20px;
+}
+
+.donate1 .new{
+    margin-top: -400px;
+}
+.donate input{
+    display: inline;
+    height: 25px;
+    width: 250px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.donate{
+    margin-top: -140px;
+    margin-bottom: 50px;
+    margin-left: 60px;
+}
+
+.new{
+    margin-left: 600px;
+}
+h1{
+    font-size: 50px;
+    text-align: center;
+}
+.donate label{
+    color: black;
+}
+.donate button{
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    display: inline-block;
+    cursor: pointer;
+    transition:1s
+}
+.donate button:hover{
+    transform: scale(1.2);
+}
+
+/* Styling for the about section */
+.about{
+    text-align: justify;
+    width: 1000px;
+    padding-left: 20px;
+}
+.about h1{
+    padding-top: 50px;
+}
+.about p{
+    font-size: 20px;
+    padding-top: 10px;
+    padding-left: 200px;
+    width: 1000px;
+}
+.about img{
+    height: 400px;
+    width: 600px;
+    margin-left: 15%;
+    color: rgb(0, 0, 0);
+    display: inline-block;
+    cursor: pointer;
+    padding: 15px 170px;
+    margin-bottom: 80px;
+    transition: 1s;
+}
+.about img:hover{
+    transform: scale(1.1);
+}
+
+/* Styling for footer section */
+footer{
+    background-color: black;
+    color: white;
+    padding: 50px 0;
+    margin-top: 0px;
+    text-align: center;
+    bottom: 0%;
+    width: 100%;
+    left: 0;
+}
+/* Styling for "go to top" button */
+.go-top-button{
+    position: fixed;
+    bottom: 35px;
+    right: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    border: 1px solid #28df34;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.go-top-button img{
+    width: 100px;
+    height: 50px;
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Title of the page -->
+    <title>Feedback Form</title>
+    
+    <!-- External CSS files for styling -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="feedbackstyle.css">
+</head>
+<body>
+    <!-- External JavaScript file for functionality -->
+    <script src="feedback.js" defer></script>
+    
+    <!-- Button for scrolling to the top -->
+    <button class="go-top-button">
+        <img src="backbutton.png" alt="arrow up">
+    </button>
+
+    <header>
+        <div class="navbar">
+            <!-- Logo -->
+            <img src="img1.png" class="logo" alt="logo">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="feedback.html" class="active">Feedback</a></li>
+                <li><a href="#">Site map</a></li>
+                <li><a href="#">About us</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Feedback Form -->
+    <form method="POST" id="feedback-form-container">
+        <div class="border">
+            <h1>Feedback Form</h1>
+            <table>
+                <tr>
+                    <td>
+                        <label>Firstname*</label>
+                        <br/>
+                        <input type="text" name="Firstname" placeholder="Enter your first name" class="txt" required>
+                    </td>
+                    <td>
+                        <label>Lastname*</label>
+                        <br/>
+                        <input type="text" name="Lastname" placeholder="Enter your last name" class="txt" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Email*</label>
+                        <br/>
+                        <input type="email" name="Email" placeholder="Enter your email" class="txt" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label>How do you rate your overall experience</label>
+                        <br/>
+                        <input type="radio" name="rate" value="bad">Bad
+                        <input type="radio" name="rate" value="average">Average
+                        <input type="radio" name="rate" value="good">Good
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label>Was this your first visiting?</label>
+                        <br/>
+                        <input type="radio" name="visit" value="yes">Yes
+                        <input type="radio" name="visit" value="no">No
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label>Was this website informative and easy to navigate through?</label>
+                        <br/>
+                        <input type="radio" name="informative" value="yes">Yes
+                        <input type="radio" name="informative" value="no">No
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label>Would you recommend our services?</label>
+                        <br/>
+                        <input type="radio" name="recommend" value="yes">Yes
+                        <input type="radio" name="recommend" value="no">No
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label>Comment*</label>
+                        <br/>
+                        <textarea class="txtarea" placeholder="Message"></textarea>
+                    </td>
+                </tr>
+                <!-- Rating Box -->
+                <tr>
+                    <td colspan="2">
+                        <div class="rating-box">
+                            <header>How satisfied are you with our services?</header>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button type="submit" class="button">Submit</button></td>
+                </tr>
+            </table>
+        </div>
+    </form>
+    
+    <!-- Feedback Response Dialog -->
+    <div id="feedback-dialog" class="dialog">
+        <span class="close-btn">&times;</span>
+        <h2>Feedback Response</h2>
+        <p id="feedback-response"></p>
+    </div>
+    
+    <!-- Preview Container-->
+    <div id="preview-container"></div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Copyright &copy; 2024 WILD HUB. All rights reserved</p>
+        <p>Page Editor: Nandun Dasanayake</p>
+    </footer>
+</body>
+</html>
